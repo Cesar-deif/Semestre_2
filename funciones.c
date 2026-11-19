@@ -16,18 +16,12 @@ float validarFloatRango(float a, float b){
     } while (num < a || num > b || val != 1);
     return num;
 }
-
 void leerCadena(char *cadena, int n){
     fgets(cadena,n,stdin);
     int len = strlen(cadena) - 1;
     cadena[len] = '\0';
 }
 
-/*
-    Modificar para que a través de la misma función
-    se pueda ingresar n libros, sin que sobreescriba los
-    libros ya ingresados
-*/
 void registrarLibro(Libro *libros, int *cont){
     printf("Ingrese el libro %d\n",*cont);
     libros[*cont].id = *cont;
